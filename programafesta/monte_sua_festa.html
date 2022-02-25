@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Monte sua festa!</title>
+
+<head>
+	<h1>Utilize nossa ferramenta para calcular a sua festa.</h1>
+</head>
+
+<body>
+
+	<input type="text" id="name" name="name" placeholder="Quantos convidados?">
+	<button type="submit">Calcule</button>
+
+</body>
+
+	<script>
+
+		function mostra(frase) {
+		document.write(frase);
+		document.write("<br>");
+
+		}
+
+		var texto = document.querySelector("#name");
+	
+		function calculoFesta() {
+
+		var quantBolo = Math.round(texto.value * 0.100);
+		var quantSalgados = texto.value * 6;
+		var quantDoces = texto.value * 4;
+
+		document.write("<h3>Você precisará de:</h3>");
+		mostra(quantBolo + "kg de bolo.");
+		mostra(quantSalgados + " unidades de salgados.");
+		mostra(quantDoces + " unidades de doces.");
+		}
+
+		var button = document.querySelector("button");
+		button.onclick = calculoFesta;
+
+	</script>
